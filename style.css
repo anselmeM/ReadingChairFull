@@ -6,7 +6,6 @@ Author: Kooleythemes team
 Author URI: www.Kooleythemes.com
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
-Text Domain: Kooleythemes.com
  
 ========================
 */
@@ -117,7 +116,7 @@ ul {
   text-transform: capitalize;
   font-weight: normal;
   font-size: 25px;
-  color: #202020;
+  color: #635858;
   transition: 0.3s all ease;
   -webkit-transition: 0.3s all ease;
   -moz-transition: 0.3s all ease;
