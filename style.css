@@ -684,3 +684,10 @@ ul {
 .footer-part ul li a:hover {
   color: var(--accent-color);
 }
+
+@media (prefers-reduced-motion: reduce) {
+  .hmj-a3 a:hover,
+  .last-part ul li a:hover {
+    transform: none;
+  }
+}
