@@ -1,0 +1,21 @@
+{
+  "name": "app",
+  "version": "1.0.0",
+  "description": "https://anselmem.github.io/ReadingChairFull/",
+  "main": "index.js",
+  "scripts": {
+    "test": "node tests/utils.test.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/anselmeM/ReadingChairFull.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/anselmeM/ReadingChairFull/issues"
+  },
+  "homepage": "https://github.com/anselmeM/ReadingChairFull#readme"
+}
