@@ -1,4 +1,5 @@
 import React, { createContext, useContext, useState, useEffect } from 'react';
+import { addItem, removeItem, updateItemQuantity, calculateTotal } from '../utils/cartUtils';
 
 const CartContext = createContext();
 
@@ -24,33 +25,20 @@ export const CartProvider = ({ children }) => {
     }, [cart]);
 
     const addToCart = (product) => {
-        setCart(prevCart => {
-            const existingItem = prevCart.find(item => item.id === product.id);
-            if (existingItem) {
-                return prevCart.map(item =>
-                    item.id === product.id ? { ...item, quantity: item.quantity + 1 } : item
-                );
-            }
-            return [...prevCart, { ...product, quantity: 1 }];
-        });
+        setCart(prevCart => addItem(prevCart, product));
     };
 
     const removeFromCart = (productId) => {
-        setCart(prevCart => prevCart.filter(item => item.id !== productId));
+        setCart(prevCart => removeItem(prevCart, productId));
     };
 
     const updateQuantity = (productId, quantity) => {
-        if (quantity < 1) return;
-        setCart(prevCart =>
-            prevCart.map(item =>
-                item.id === productId ? { ...item, quantity } : item
-            )
-        );
+        setCart(prevCart => updateItemQuantity(prevCart, productId, quantity));
     };
 
     const clearCart = () => setCart([]);
 
-    const cartTotal = cart.reduce((total, item) => total + item.price * item.quantity, 0);
+    const cartTotal = calculateTotal(cart);
 
     return (
         <CartContext.Provider value={{ cart, addToCart, removeFromCart, updateQuantity, clearCart, cartTotal }}>
