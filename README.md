@@ -1,6 +1,6 @@
 # 📚 LUMINA | Immersive Book Store
 
-![Lumina Header](https://raw.githubusercontent.com/anselmeM/ReadingChairFull/main/public/header.png)
+Lumina https://readingchairfull.onrender.com/
 
 Lumina is a premium, high-end e-commerce platform designed for the modern reader. It bridges the gap between digital convenience and the tactile beauty of reading, offering an immersive experience for discovering and consuming both physical books and audiobooks.
 
